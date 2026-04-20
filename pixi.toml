@@ -1,0 +1,11 @@
+[workspace]
+authors = ["Mwangi-Derrick <mwangiderrick640@gmail.com>"]
+channels = ["https://conda.modular.com/max-nightly", "conda-forge"]
+name = "fire-mojo"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+mojo = ">=0.26.3.0.dev2026042005,<0.27"
