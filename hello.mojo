@@ -1,25 +1,23 @@
-# Because 🔥 is cool but .mojo works everywhere
+struct Point:
+    var x: Int
+    var y: Int
 
-fn main():
-    print("Hello from Mojo!")
+    # Using the 'out' pattern with direct field initialization
+    def __init__(out self: Self, x: Int, y: Int):
+        self.x = x
+        self.y = y
+
+def main():
+    print("Hello from Mojo 0.26!")
     
-    # Strong typing like Rust/TS, but with Pythonic syntax
     var x: Int = 42
-    let y: Int = 100  # immutable like Rust's let, TS's const
+    var y: Int = 100 
     
-    # Type inference like Go/Zig
-    var z = 3.14  # Float64 inferred
-    
-    # Structural types (like Go/Zig)
-    @value
-    struct Point:
-        var x: Int
-        var y: Int
-    
+    # Instance creation
     var p = Point(10, 20)
-    print("Point: (\{p.x}, \{p.y})")
+    print("Point: (", p.x, ", ", p.y, ")")
     
-    # SIMD - Mojo's superpower (you'll love this coming from C++)
+    # SIMD - Mojo's core performance feature
     var vec = SIMD[DType.float64, 4](1, 2, 3, 4)
-    var result = vec + 10  # Vectorized operation
-    print("SIMD vector: ", result)
+    var result = vec + 10
+    print("SIMD vector:", result)
